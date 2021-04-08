@@ -28,20 +28,20 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
 
-_Note: No lab notes required._
+
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > The application performed well, regarding one query that end up with an arror.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance is uneven, since the requests are diferent and each of them taking diferent amount of time to proccess.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > The query that was less performed was the query number 6, since it took the longest.
 * Among the less performant requests, which ones are the most problematic?
   > Enter Response Here.
 
