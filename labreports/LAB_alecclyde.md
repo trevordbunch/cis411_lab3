@@ -2,9 +2,9 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Alec Chappell  
+**GitHub Handle:** [@alecclyde](https://github.com/alecclyde)  
+**Repository:** [Alecclyde's Forked Repository](https://github.com/alecclyde/cis411_lab5_Monitoring)  
 **Collaborators:** 
 ___
 
@@ -17,9 +17,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "7d1f4ffc-e1e8-4029-9965-3f6054506498",
+      "name": "Alec Chappell",
+      "email": "ac1474@messiah.edu"
     }
   }
 }
