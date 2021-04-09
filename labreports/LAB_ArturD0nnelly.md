@@ -47,11 +47,11 @@ app_name: ['cislab']
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > Within most of the transactions the segment defind as remainder took of the time.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The leat performant request was the request number 6, which took the longest to execute. Also, request numbet 7 returned an error, which I think that getting an error would consider to be low performance.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > In the request number 6 the most problematic segment would be queryOrderBySearchTerm, which has highest duaration. The information about the segments in request number 7 is not awailble, but I belive that the problem in that request is that it can not find the item that was defined as "gmail.com". 
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
   > Enter Response Here.
 
