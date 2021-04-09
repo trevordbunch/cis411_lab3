@@ -2,14 +2,14 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Roman Searle  
+**GitHub Handle:** RomanSearle
+**Repository:** [Your Forked Repository](https://github.com/RomanSearle/cis411_lab5_Monitoring) <br>
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/RomanSearle/cis411_lab5_Monitoring
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -17,9 +17,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "e2f3d43b-f16f-4429-a2cb-4c11306e7598",
+      "name": "Roman Searle",
+      "email": "romanpsearle@gmail.com"
     }
   }
 }
