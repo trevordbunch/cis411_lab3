@@ -53,7 +53,11 @@ app_name: ['cislab']
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > In the request number 6 the most problematic segment would be queryOrderBySearchTerm, which has highest duaration. The information about the segments in request number 7 is not awailble, but I belive that the problem in that request is that it can not find the item that was defined as "gmail.com". 
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > For the request number 7 that returned an error when requesting for all acounts that are under gmail.com, I changed it to retrive id, email, and name. After that all of the acounts that cantain gmail.com came up. 
+  Here is what is did: 
+  ![Changes made to graphql code](../assets/graphql_gmail.png)
+  And here we can see that arrow is false this time:
+  ![False arror for gmail.com](../assets/Inkederror_is_false_LI.jpg)
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
