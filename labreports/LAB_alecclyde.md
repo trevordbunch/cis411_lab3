@@ -28,7 +28,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -37,14 +37,20 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
-* Is performance even or uneven? 
-  > Enter Response Here.
-* Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
-* Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  >Through my usage of this application, I came up with these numbers on resource usage: 
+  >> 29.7% CPU peak  
+  60.2% Memory peak  
+  55.1% Storage usage  
+  Average of 721 ms response time  
+  8.13 rpm throughput average
 
+* Is performance even or uneven? 
+  > The tests were incredibly uneven, some tests were executed within a second, and others took nearly 50 seconds (47.8s).
+* Between queries and mutations, what requests are less performant? 
+  > Queries did significantly worse when it came to performance. Out of all functional queries and mutations, no mutation took longer than any of the queries.
+* Among the less performant requests, which ones are the most problematic?
+  > The query that had us search for "everything" had us waiting about 48 seconds for the finish. It was by far the most intensive query or mutation, lasting way longer than any other because it was pulling the most information.
+ 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
   > Enter Response Here.
