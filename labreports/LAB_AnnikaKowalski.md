@@ -12,20 +12,20 @@ ___
   - This is the URL of my forked repository. https://github.com/AnnikaKowalski/cis411_lab5_Monitoring
 
 # Step 2: Clone your forked repository from the command line
-- My GraphQL response from adding myself as an account on the test project
-{
-  "data": {
-    "mutateAccount": {
-      "id": "5456e9a2-475b-4dee-96f4-8d22ca9b0709",
-      "name": "Annika Kowaslki",
-      "email": "volleygirl21@comcast.net"
-    }
-  }
+- My GraphQL response from adding myself as an account on the test project  
+{  
+  "data": {  
+    "mutateAccount": {  
+      "id": "5456e9a2-475b-4dee-96f4-8d22ca9b0709",  
+      "name": "Annika Kowaslki",  
+      "email": "volleygirl21@comcast.net"  
+    }  
+  }  
 }
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cis411_Lab5']
 ```
 
 # Step 4: Exercising the application / generating performance data
