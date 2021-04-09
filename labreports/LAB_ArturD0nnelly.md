@@ -37,33 +37,31 @@ app_name: ['cislab']
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > The application performed well, regarding one query that end up with an arror.
+  > The application performed well, regarding one query that ends up with an error. All of the requests went through pretty fast, regarding the request that was asking for all of the items. 
 * Is performance even or uneven? 
-  > The performance is uneven, since the requests are diferent and each of them taking diferent amount of time to proccess.
+  > The performance is uneven since the requests are different and each of them taking a different amount of time to process.
 * Between queries and mutations, what requests are less performant? 
-  > The query that was less performed was the query number 7, since this query end up with and arror. Also, the query number 6 showed to be less performal in amount of time it took to execute it. 
+  > The query that was less performed was query number 7 since this query ends up with an error. Also, query number 6 showed to be less performant in the amount of time it took to execute it. 
 * Among the less performant requests, which ones are the most problematic?
-  > Among the less performant requests number 7 is most problematic. Request number 7 endup with an error, wich would be more problematink then the request that took longer and still gived the right output.
+  > Among the less performant requests number 7 is most problematic. Request number 7 end up with an error, which would be more problematic than the request that took longer and still given the right output.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Within most of the transactions the segment defind as remainder took of the time.
+  > Within most of the transactions the segment defined as queryOrdersBySearchTerm took most of the time.
 * Using New Relic, identify and record the least performant request(s).
-  > The leat performant request was the request number 6, which took the longest to execute. Also, request numbet 7 returned an error, which I think that getting an error would consider to be low performance.
+  > The least performant request was request number 6, which took the longest to execute. Also, request number 7 returned an error, which I think that getting an error would consider being low performance.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > In the request number 6 the most problematic segment would be queryOrderBySearchTerm, which has highest duaration. The information about the segments in request number 7 is not awailble, but I belive that the problem in that request is that it can not find the item that was defined as "gmail.com". 
+  > In request number 6 the most problematic segment would be queryOrderBySearchTerm, which has the highest duration. The information about the segments in request number 7 is not available, but I believe that the problem with that request is that it can not find the item that was defined as "gmail.com". 
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > For the request number 7 that returned an error when requesting for all acounts that are under gmail.com, I changed it to retrive id, email, and name. After that all of the acounts that cantain gmail.com came up. 
-  Here is what is did: 
+  > For request number 7 that returned an error when requesting for all accounts that are under gmail.com, I changed it to retrieve id, email, and name. After that, all of the accounts that contain gmail.com came up. 
+  For request number 6 I would recommend specifying the item instead of requesting every single one. This would highly improve the performance.
+  
+
+# Step 7: Submitting a Pull Request
+
+
+# Step 8: [EXTRA CREDIT] Address the performance issue(s)
+Here is what I did. All accounts with gmail were given: 
   ![Changes made to graphql code](../assets/graphql_gmail.png)
   And here we can see that arrow is false this time:
   ![False arror for gmail.com](../assets/Inkederror_is_false_LI.jpg)
-
-# Step 7: Submitting a Pull Request
-_Note: No lab notes required._
-
-# Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
