@@ -45,21 +45,38 @@ _Note: No lab notes required._
   8.13 rpm throughput average
 
 * Is performance even or uneven? 
-  > The tests were incredibly uneven, some tests were executed within a second, and others took nearly 50 seconds (47.8s).
+  > The tests were incredibly uneven, some tests were executed within a second, and others took nearly 45 seconds (42.7s).
 * Between queries and mutations, what requests are less performant? 
   > Queries did significantly worse when it came to performance. Out of all functional queries and mutations, no mutation took longer than any of the queries.
 * Among the less performant requests, which ones are the most problematic?
-  > The query that had us search for "everything" had us waiting about 48 seconds for the finish. It was by far the most intensive query or mutation, lasting way longer than any other because it was pulling the most information.
+  > The query that had us search for "everything" had us waiting about 42.7 seconds for the finish. It was by far the most intensive query or mutation, lasting way longer than any other because it was pulling the most information.
  
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
-* Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > Our query for everything was docked at 42,700ms.
+* Using New Relic, identify and record the least performant request.
+``` graphql
+
+  #Query 6: retrieve all orders container the word everything
+  orders(query: "everything") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+  }
+}
+```
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > Remainder was the most significant segment taking 93% of the time.  
+  queryOrdersBySearchTerm took the second highest percentage of time at 6%.  
+   ![](../assets/alecclyde_transactiontrace.png)
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > Pulling everything in the database is going to consistantly take the most time because it pulls **everything**. Unless the entire pull is necessary, a query must be refined to keep the transaction time low. 
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
