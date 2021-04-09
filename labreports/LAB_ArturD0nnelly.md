@@ -41,9 +41,9 @@ app_name: ['cislab']
 * Is performance even or uneven? 
   > The performance is uneven, since the requests are diferent and each of them taking diferent amount of time to proccess.
 * Between queries and mutations, what requests are less performant? 
-  > The query that was less performed was the query number 6, since it took the longest.
+  > The query that was less performed was the query number 7, since this query end up with and arror. Also, the query number 6 showed to be less performal in amount of time it took to execute it. 
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > Among the less performant requests number 7 is most problematic. Request number 7 endup with an error, wich would be more problematink then the request that took longer and still gived the right output.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
