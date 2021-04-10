@@ -6,7 +6,7 @@ ___
 **Name:** Micah Johnson  
 **GitHub Handle:** @mcjo163  
 **Repository:** [mcjo163/cis411_lab5_Monitoring](https://github.com/mcjo163/cis411_lab5_Monitoring)  
-**Collaborators:**
+**Collaborators:** None
 ___
 
 ## Step 1: Fork this repository
@@ -95,3 +95,4 @@ For the purposes of gaining 25% extra credit on the assignment, perform any of t
    - Running this query instead of the original returns (likely the same) results in 0.4 seconds rather than 52 seconds.
    ![query improvement](/assets/extra_credit.png)
 3. Check in those changes and **note your solution(s)** in your lab report.
+   - I made no code changes, so I'm not sure if this is what you were looking for for this. But, it did dramatically improve the response time.
