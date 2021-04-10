@@ -8,7 +8,7 @@ ___
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/julinametz/cis411_lab5_Monitoring 
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -16,9 +16,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "2966a17b-40e5-41b2-b35f-221580da7816",
+      "name": "Julina Metz",
+      "email": "jm1879@messiah.edu"
     }
   }
 }
