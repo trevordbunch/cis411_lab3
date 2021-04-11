@@ -59,6 +59,7 @@ app_name: ['cislab']
 
 **Overview of all Transactions**
 ![Overview](/assets/overview.png)
+![All past Transactions](/assets/transactions_all.png)
 
 **Time Consumed By Segment**
 ![Time by Segment](/assets/bySegment.png)
