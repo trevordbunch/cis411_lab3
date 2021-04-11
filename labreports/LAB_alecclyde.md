@@ -5,11 +5,11 @@ ___
 **Name:** Alec Chappell  
 **GitHub Handle:** [@alecclyde](https://github.com/alecclyde)  
 **Repository:** [Alecclyde's Forked Repository](https://github.com/alecclyde/cis411_lab5_Monitoring)  
-**Collaborators:** 
+**Collaborators:**  [@ArturD0nnelly](https://github.com/ArturD0nnelly)
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- The [URL](https://github.com/alecclyde/cis411_lab5_Monitoring) of my forked repository
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
