@@ -76,13 +76,21 @@ app_name: ['cislab']
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > The sixth query took the most time. Upon running, there is a considerably long response time compared to the other queries.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The least performant request was the seventh. It resulted in an error saying that it could not validate the request, and could not query the field.
+  ![Error](/assets/error.png)
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The two worriesome requests throughout this lab have been the sixth and seventh. When looking at the Transaction Traces which are shown below for each, it seems that the seventh one had a longer response time at 45,000 ms while the sixth had response time of 41,300 ms. This surprised me because while I was running each, the sixth took much longer to produce an outcome than the seventh one. In addition, for both of them the "queryOrdersBySearchTerm" took the longest time other than "remainder". The remainder took a significant amount of time which makes me wonder if the database simply contains too much unnecessary data which showed specifically in 6. It was able to come up with a result, but with so much time that it might've taken extra to sort through all the other data that wasn't needed.
+
+  **Transaction Trace for 6**
+  ![Transaction Trace 6](/assets/6_transaction.png)
+
+  **Transaction Trace for 7**
+  ![Transaction Trace 7](/assets/responsetime.png)
+
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > The first thing I would suggest in order to improve performance would be to remove unnecessary data as I mentioned before. A big part of the response time could be that the program takes the query and needs to sort through information in the database that is not necessary and if some of that could be removed, response time could improve.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
