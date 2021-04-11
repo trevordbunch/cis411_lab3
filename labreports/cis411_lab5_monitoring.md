@@ -5,7 +5,7 @@ ___
 **Name:** Joe Vera  
 **GitHub Handle:** JoeV22  
 **Repository:** [My Forked Repository](https://github.com/JoeV22/cis411_lab5_Monitoring)  
-**Collaborators:** @trevordbunch
+**Collaborators:** @trevordbunch @romansearle
 ___
 
 # Step 1: Fork this repository
