@@ -33,17 +33,45 @@ app_name: ['cislab']
 
 # Step 4: Exercising the application / generating performance data
 
-_Note: No lab notes required._
+**Query 1 results:**
+![Query 1](/assets/query1.png)
+
+**Results after Query 2**
+![Query 2](/assets/query2.png)
+
+**Results after Query 3**
+![Query 3](/assets/query3.png)
+
+**Results after Query 4**
+![Query 4](/assets/query4.png)
+
+**Results after Query 5**
+![Query 5](/assets/query5.png)
+
+**Results after Query 6**
+![Query 6](/assets/query6.png)
+
+**Results after Query 7**
+![Query 7](/assets/query7.png)
+
+**Query 7 Response Time**
+![Response Time](/assets/responsetime.png)
+
+**Overview of all Transactions**
+![Overview](/assets/overview.png)
+
+**Time Consumed By Segment**
+![Time by Segment](/assets/bySegment.png)
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
   > 
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > For this application, performance was uneven based on my observations. For each of the queries, when looking at throughput which is the capacity of the app at each query, and as you can see from the overview, it varies with each. The average throughput was 3.44 rpm but the queries are each anywhere from 0 to 25. Also, if you look at the average duration after each query, it is always different, some varying more than others between queries. This shows that the time during each is not linear; therefore, this app is not very consistent in it's performance. 
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > The requests which were less performant were query 6 and 7. With query 6, it took the longest amount of time to even show results for it and when I looked at the  
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > The seventh query is the most problematic due to the error returned. This one also produced an error, so no results were even given.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
