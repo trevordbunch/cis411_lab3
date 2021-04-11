@@ -34,13 +34,13 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  - The performance of the application really relied on the what the query is. Some of the queries responded almost instantly while others took 30 seconds to over a minute to 
 * Is performance even or uneven? 
-  > Enter Response Here.
+  - As mentioned in the answer above the performance/response time was very scattered and unpredictable. With that being said the performance is very uneven. 
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  - Queries are less performant. Queries have to search through all existing data which takes a lot of time and effort to perform. Some of the queries we were to perform gave me error messages which was challenging as well. Overall, mutations will not take longer than a mutation to perform.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  - Queries are searching for specific strings of data which will make the performance of the query to take longer than other performances. When a query is being performed it goes through to check for the data each time it is run, as previously mentioned, which causes lag time as opposed to knowing which field/data to check first. 
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
