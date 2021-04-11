@@ -2,14 +2,14 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Wesley Cheah
+**GitHub Handle:** [wesleyyycheah](https://github.com/wesleyyycheah)  
+**Repository:** [https://github.com/wesleyyycheah/cis411_lab5_Monitoring](https://github.com/wesleyyycheah/cis411_lab5_Monitoring) 
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- URL: [https://github.com/wesleyyycheah/cis411_lab5_Monitoring](https://github.com/wesleyyycheah/cis411_lab5_Monitoring)
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -17,9 +17,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "a3c54a94-091a-487e-9e74-9f164d1c4bee",
+      "name": "Wesley Cheah",
+      "email": "wesleycheah1997@gmail.com"
     }
   }
 }
@@ -28,7 +28,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -37,23 +37,23 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > The query performance of this application was varied. There were a few queries that were instant but there were a couple that made me doubt my machine's performance because the cursor was stuck in the loading animation for quite a while.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance was uneven.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > The first and second last queries were the least performant. In addition, the last query did not work at all.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > The last one as it only returned an error instead of information.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > The last segment took the most time.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The least performant request was the "everything" query. That one took 27,944 milliseconds.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The segment that is the most problematic, which also took the longest, is the "everything" query and that took around 28 seconds.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > Only query data that you need. For example, the "everything" query would not take such a long time if the user only queried information that he/she needed.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
