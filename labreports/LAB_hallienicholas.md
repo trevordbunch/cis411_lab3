@@ -70,7 +70,7 @@ app_name: ['cislab']
 * Is performance even or uneven? 
   > For this application, performance was uneven based on my observations. For each of the queries, when looking at throughput which is the capacity of the app at each query, and as you can see from the overview, it varies with each. The average throughput was 3.44 rpm but the queries are each anywhere from 0 to 25. Also, if you look at the average duration after each query, it is always different, some varying more than others between queries. This shows that the time during each is not linear; therefore, this app is not very consistent in it's performance. 
 * Between queries and mutations, what requests are less performant? 
-  > The requests which were less performant were query 6 and 7. With query 6, it took the longest amount of time to even show results for it and when I looked at the  
+  > The requests which were less performant were query 6 and 7. With query 6, it took the longest amount of time to even show results for it, but it did better than 7 because it eventually had an output that wasn't an error. Query 7 showed an error as the output, and when looking at the dashboard on New Relic, the average duration for the transaction showed to be 526ms, which had jumped from only 153ms after query 6. Therefore, 6 and 7 definitely were the less perrformant ones for different reasons.
 * Among the less performant requests, which ones are the most problematic?
   > The seventh query is the most problematic due to the error returned. This one also produced an error, so no results were even given.
 
@@ -90,8 +90,7 @@ app_name: ['cislab']
   ![Transaction Trace 7](/assets/responsetime.png)
 
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > The first thing I would suggest in order to improve performance would be to remove unnecessary data as I mentioned before. A big part of the response time could be that the program takes the query and needs to sort through information in the database that is not necessary and if some of that could be removed, response time could improve.
-
+  > The first thing I would suggest in order to improve performance would be to **remove unnecessary data** as I mentioned before. A big part of the response time could be that the program takes the query and needs to sort through information in the database that is not necessary and if some of that could be removed, response time could improve. Another thing that could be implemented is **cache control**. Cache control lowers the data load by reducing the amount of requests the system processes. This could potentially be good in this situation because cache control will stop the system from pulling resources that it has already used for previous queries. Therefore, GraphQL could access the history and, for example, if I had previously run the sixth query in this lab, the second time I run it I might get a shorter response time. It should be able to draw resources from running it the first time, thus improving the performance of the request. Another thing I might suggest trying is creating **indexes** within the database so that with each query, it wouldn't have to go through every single entry to look for the requested keywords or command, but instead just pull up a group of them using an ID. Looking at the Transaction Traces, it appeared that many, if not all, of the requests were slowed down due to "queryOrdersBySearchTerm". Therefore, if the data had been indexed, the system wouldn't have needed to spend that extra time searching for the search term, but could instead have a library of the terms together for easy access.
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
 
