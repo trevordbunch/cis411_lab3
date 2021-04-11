@@ -2,14 +2,14 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
-**Collaborators:** 
+**Name:** Joseph Tonnies  
+**GitHub Handle:** Jmtonnies  
+**Repository:** https://github.com/Jmtonnies/cis411_lab5_Monitoring
+**Collaborators:** alecclyde
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/Jmtonnies/cis411_lab5_Monitoring
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -18,8 +18,8 @@ ___
   "data": {
     "mutateAccount": {
       "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "name": "Joseph Tonnies",
+      "email": "Jmtonnies@gmail.com"
     }
   }
 }
@@ -28,7 +28,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['DaLab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -37,29 +37,23 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > That it is actually pretty slow. If amazon took that long to load it would be pretty annoying.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > ZThe performance was uneven depending on the query.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Queries are less performant becasue they are scanning and finding info while mutations are just changing data.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > The Everything requests took a long time to execute and bogged down the system. Also, the Gmail.com request did not go through just came back with errors
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > The segment	Expressjs: post / 
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The request that requested everything
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The segments of the trasaction trace go post / then Middleware: getOrders
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > Re-label the search term Everything so that literally everything on the website pops up does not pop up and instead just everything bagels.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
-
-# Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
