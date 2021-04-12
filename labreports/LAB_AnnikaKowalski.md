@@ -17,11 +17,11 @@ ___
   "data": {  
     "mutateAccount": {  
       "id": "5456e9a2-475b-4dee-96f4-8d22ca9b0709",  
-      "name": "Annika Kowaslki",  
-      "email": "volleygirl21@comcast.net"  
+      "name": "Annika Kowalski",  
+      "email": "volleygirl21@comcast.net"      
     }  
-  }  
-}
+  }    
+}   
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
@@ -44,13 +44,13 @@ _Note: No lab notes required._
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  - The query called "remainder took the most amount of time to return a response almost each time it was run. This took the most time because the server has to look through each database to find the ones that matched the query.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  - Query #6 was the least performant query during the performance that I noticed. It took the longest to return any output which was about a minute to a minute and a half for a response. 
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  - Once again Remainder was the one that took the longest amount of time to run. This took place because it was looking through each database for the term "everything."
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  - Pulling everything in the database will always take the longest time since it is requiring so much searching to be done for everything not just a specific item. 
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
@@ -58,5 +58,23 @@ _Note: No lab notes required._
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
+  - By changing the word query to bagel it drastically reduces the time it takes to get a response.
+  {  
+  #Query 6: retrieve all orders container the word everything  
+  orders(bagel: "everything") {  
+    id  
+    customer {  
+      id  
+      email  
+    }  
+    items {  
+      label  
+      quantity  
+    }  
+  }  
+}  
+
+2. Verify the improved performance in New Relic, 
+    - By making this change the time for a response went from almost a minute to roughly 4 seconds for a response. 
+2. Check in those changes and in your lab report. 
+    - The changes made were strictly to the working of the query not to the code.
