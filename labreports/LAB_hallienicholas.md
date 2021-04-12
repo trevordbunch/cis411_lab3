@@ -6,6 +6,7 @@ ___
 **GitHub Handle:** hallienicholas  
 **Repository:** [My Forked Repository](https://github.com/hallienicholas/cis411_lab5_Monitoring.git)  
 **Collaborators:** 
+ @JoeV22
 ___
 
 # Step 1: Fork this repository
@@ -66,13 +67,13 @@ app_name: ['cislab']
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > According to what I have observed in this application, I can see that the response times for a majority of them were fairly steady except for a couple at the end. The only thing is that the queries all required different amounts of data and had differing response times, making the process a little choppy and uneven. The error at the end also did not help in the deployment of this application.
+  > According to what I have observed in this application, I can see that the response times for a majority of them were fairly steady except for a couple at the end. The only thing is that the queries all required different amounts of data and had differing response times, making the process a little choppy and uneven. The error at the end also stunted the deployment of this application.
 
 * Is performance even or uneven? 
-  > For this application, performance was uneven based on my observations. For each of the queries, when looking at throughput, which is the capacity of the app at each query, and as you can also see from the overview, performance varies with each. The average throughput was 3.44 rpm but the queries are each anywhere from 0 to 25. Also, if you look at the average duration after each query, it is always different, some varying more than others between queries. This shows that the time during each is not linear; therefore, this app is not very consistent in it's performance. 
+  > For this application, performance was uneven based on my observations. For each of the queries, when looking at throughput, which is the capacity of the app at each query, performance varies with each which can also be seen from the overview. The average throughput was 3.44 rpm but the queries are each anywhere from 0 to 25. Also, if you look at the average duration after each query, it is always different, some varying more than others between queries. This shows that the time during each is not linear; therefore, this app is not very consistent in it's performance. 
 
 * Between queries and mutations, what requests are less performant? 
-  > The requests which were less performant were query 6 and 7. With query 6, it took the longest amount of time to even show results for it, but it did better than 7 because it eventually had an output that wasn't an error. Query 7 showed an error as the output, and when looking at the dashboard on New Relic, the average duration for the transaction showed to be 526ms, which had jumped from only 153ms after query 6. Therefore, 6 and 7 definitely were the less perrformant ones for different reasons.
+  > The requests that were less performant were query 6 and 7. With query 6, it took the longest amount of time to even show results for it, but it did better than 7 because it eventually had an output that wasn't an error. Query 7 showed an error as the output, and when looking at the dashboard on New Relic, the average duration for the transaction showed to be 526ms, which had jumped from only 153ms after query 6. Therefore, 6 and 7 definitely were the less perrformant ones for different reasons.
 
 * Among the less performant requests, which ones are the most problematic?
   > The seventh query is the most problematic due to the error returned. This one also produced an error, so no helpful results were even given.
