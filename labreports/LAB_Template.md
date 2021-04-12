@@ -2,7 +2,7 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Tim Diana  
+**Name:** Timothy Diana  
 **GitHub Handle:** Tim12-code  
 **Repository:** 
 **Collaborators:** @NedacNostrebor
