@@ -2,10 +2,10 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
-**Collaborators:** 
+**Name:** Adam Hungerford
+**GitHub Handle:** [adamhungerford](https://github.com/adamhungerford)  
+**Repository:** https://github.com/adamhungerford/cis411_lab5_Monitoring  
+**Collaborators:** None
 ___
 
 # Step 1: Fork this repository
@@ -36,24 +36,32 @@ app_name: ['MYAPP']
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
+
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > Most tasks take between 0 and 15 seconds to complete, with the majority of those taking less than 5.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > Performance is uneven depending on the task.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Queries take more time - less performant.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > Searching all fields takes a long time. Also, erroneous queries cause errors.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > Primarily "remainder." In the shortest querys, however, "middleware" takes about half the time.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > Queries 6 and 7 were the most problematic.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > "Remainder."
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > Query 6: Only query the bagel field. `bagel:everything`
+  > Query 7: It should look like this:
+  >>```{```
+  >>``` accounts(query: "gmail.com") {```
+  >>```   id```
+  >>```   email```
+  >>``` }```
+  >>```}```
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
@@ -62,4 +70,8 @@ _Note: No lab notes required._
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
+3. Check in those changes and **note your solution(s)** in your lab report.
+![Correction to query #6.](../assets/lab5_02_ec3.png)
+![Outcome of correction to query #6.](../assets/lab5_02_ec4.png)
+![Correction to query #7.](../assets/lab5_02_ec1.png)
+![Outcome of correction to query #7.](../assets/lab5_02_ec2.png)
