@@ -27,7 +27,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['<CISLAB>']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -36,29 +36,24 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > Most requests were returned quickly and performed well. There were two requests that took much longer to respond, so the overall performace of the application is uneven.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance is uneven. Most transactions completed between 0.1 - 0.3 seconds, but some took much longer. 
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Queries are less performant than mutations.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > The most problematic by far was query #6 which took 46.8 seconds. The second most problematic query was #1 which took 3.36 seconds. All other requests took somewhere between 0.1 - 0.3 seconds. 
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > For query #1 the queryOrdersBySearchTerm segment took the longest at 4.4 seconds. The second longest segment was loadOrderById at 1.32 seconds. For query #6 the queryOrdersBySearchTerm segment took the longest at 44.1 seconds.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The least performant request was query #6.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The segment that is the most problematic in query #6 is queryOrdersBySearchTerm which took 44.1 seconds.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > Query #6 should be rewritten so that it doesn't query everything in the database, it only queries records with everything bagels. This will significantly reduce the transaction time. 
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
 
-# Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
