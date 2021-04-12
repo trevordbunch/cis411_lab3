@@ -2,33 +2,30 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Tim Diana  
+**GitHub Handle:** Tim12-code  
+**Repository:**   
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/trevordbunch/cis411_lab5_Monitoring
 
 # Step 2: Clone your forked repository from the command line
-- My GraphQL response from adding myself as an account on the test project
-```
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "40e0c90e-3f1a-4426-92ca-e630abf5eab4",
+      "name": "Timothy Diana",
+      "email": "td1245@messiah.edu"
     }
   }
 }
-```
 
 # Step 3: Signup for and configure New Relic
-- The chosen name of your New Relic ```app_name``` configuration
+- The chosen name of your New Relic ```cislab``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['<cislab>']
 ```
 
 # Step 4: Exercising the application / generating performance data
