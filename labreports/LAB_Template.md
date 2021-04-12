@@ -60,7 +60,4 @@ _Note: No lab notes required._
 _Note: No lab notes required._
 
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
+I managed to get better performance for the sixth query by changing the line `query: everything` to `bagel: everything`. While this could theoretically return different data if one person's email contained the word "everything", this change sped up the time by a ton.
