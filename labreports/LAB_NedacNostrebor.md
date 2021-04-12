@@ -4,7 +4,7 @@ ___
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
 **Name:** Caden Robertson 
 **GitHub Handle:** NedacNostrebor 
-**Repository:** Your Forked Repository  
+**Repository:** [Your Forked Repository](https://github.com/NedacNostrebor/cis411_lab5_Monitoring)
 **Collaborators:** 
 ___
 
@@ -29,7 +29,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['cislabnp']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
