@@ -60,6 +60,36 @@ _Note: No lab notes required._
 
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
+1. Adjust the diagnosed slow call(s) to improve performance. </br>
+```
+{
+  #Query 7: all accounts that contain gmail.com
+  accounts(query: "gmail.com") {
+    id
+    items {
+      label
+      quantity
+    }
+  }
+}
+```
+</br>
+What was wrong with this was the fact that in the table "accounts", there is no "items". There are other columns like "cell", "name", "id", and "email". So, to get rid of the error, we have to change "items" to one of the columns needed. For example: </br>
+
+```
+{
+  #Query 7: all accounts that contain gmail.com
+  accounts(query: "gmail.com") {
+    id
+    name
+    email
+    cell
+  }
+}
+``` 
+</br>
+2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**. </br>
+
+So since the transaction did not go through since the table did not have an "items" column, we can use "id" or "email" to actually get what we need. </br>
+![screenshot](screenshot.png)
+3. Check in those changes and **note your solution(s)** in your lab report. 
