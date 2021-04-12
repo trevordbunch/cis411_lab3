@@ -91,5 +91,5 @@ What was wrong with this was the fact that in the table "accounts", there is no 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**. </br>
 
 So since the transaction did not go through since the table did not have an "items" column, we can use "id" or "email" to actually get what we need. </br>
-![screenshot](screenshot.png)
+![screenshot](../screenshot.png) </br>
 3. Check in those changes and **note your solution(s)** in your lab report. 
