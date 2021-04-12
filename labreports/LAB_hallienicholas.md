@@ -6,7 +6,7 @@ ___
 **GitHub Handle:** hallienicholas  
 **Repository:** [My Forked Repository](https://github.com/hallienicholas/cis411_lab5_Monitoring.git)  
 **Collaborators:** 
- @JoeV22
+ @JoeV22 @AnnikaKowalski
 ___
 
 # Step 1: Fork this repository
