@@ -29,7 +29,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cis411_lab5_Monitoring']
 ```
 
 # Step 4: Exercising the application / generating performance data
