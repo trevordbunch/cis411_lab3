@@ -38,17 +38,17 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > The application's performance overall went pretty well for the most part, with the exception of the last GraphQL query from Step 4, which gave an error, resulting in the query to be altered to work properly. 
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance is mostly even, with peaks occurring when a query or mutation is being processed, then going back down to null when the processes are completed.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Queries are less performant as they take longer amounts of time for the server to generate the results. The particular queries which fell under this category were queires 5 and 6 from step 4, with the one from step 5 taking the lomgest amount of time to generate the results.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > The most problematic one was query 6, though it had more to do with the syntax of the query than the server, the query had to be altered to work properly.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > The transaction which took the most time was query 5 from step 4.
 * Using New Relic, identify and record the least performant request(s).
   > Enter Response Here.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
