@@ -2,14 +2,15 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Adam Lenker  
+**GitHub Handle:** al1412  
+**Repository:** https://github.com/al1412/cis411_lab5_Monitoring  
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
 - The URL of my forked repository
+ https://github.com/al1412/cis411_lab5_Monitoring    
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
