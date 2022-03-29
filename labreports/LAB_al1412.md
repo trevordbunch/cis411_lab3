@@ -57,7 +57,6 @@ _Note: No lab notes required._
   > To improve the perfomance of the requests, I would suggest narrowing down the results of those two queries even further (ex: combine both queries so it gets results which have emails ending in "@gmail.com" and a query which has the word "everything" located on it.
 
 # Step 7: Submitting a Pull Request
-_Note: No lab notes required._
 Pull request URL: https://github.com/trevordbunch/cis411_lab5_Monitoring/pull/22#issue-1185110923   
 
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
