@@ -50,11 +50,11 @@ _Note: No lab notes required._
 * Within the transactions you're examining, what segment(s) took the most time?
   > The transaction which took the most time was query 5 from step 4.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The least performant request occured at 11:27 AM, this corresponds with the time it took to get the first query from step 4, which took a very quick time to achieve its findings.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The segment of the process that seemed to be the most probelmatic based on the results was queryOrdersBySearchTerm, which took 36,300 milliseconds to get findings for the query. This can best be attributed to the later two queries, which took significantly longer to get their respective data on GraphQL.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > To improve the perfomance of the requests, I would suggest narrowing down the results of those two queries even further (ex: combine both queries so it gets results which have emails ending in "@gmail.com" and a query which has the word "everything" located on it.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
@@ -63,4 +63,7 @@ _Note: No lab notes required._
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
+2. Check in those changes and **note your solution(s)** in your lab report.     
+
+
+Extra note: http://localhost:4001/graphql had to be used instead of 4000 as this is what npm generated for this lab when it was installed in the files for it.   
