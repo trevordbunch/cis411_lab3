@@ -18,9 +18,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "2ed1e4f2-de97-4cfc-81d5-8362e43f1b95",
+      "name": "Adam Lenker",
+      "email": "al1412@messiah.edu"
     }
   }
 }
