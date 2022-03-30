@@ -16,9 +16,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "11bb97ef-8e86-4fd6-add7-0fa745ef9740",
+      "name": "Garrett Gerard Nissley",
+      "email": "gn1166@messiah.edu"
     }
   }
 }
