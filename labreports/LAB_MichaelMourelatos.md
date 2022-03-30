@@ -1,11 +1,11 @@
 # Lab Report: Monitoring
 ___
-**Course:** CIS 411, Spring 2021  
+**Course:** CIS 411, Spring 2022  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
-**Collaborators:** 
+**Name:** Michael Mourelatos  
+**GitHub Handle:** [MichaelMourelatos](https://github.com/MichaelMourelatos)  
+**Repository:** [My Forked Repository](https://github.com/MichaelMourelatos/cis411_lab5_Monitoring)  
+**Collaborators:** [Grace Schlauder](https://github.com/grace-schl)
 ___
 
 # Step 1: Fork this repository
@@ -28,12 +28,14 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: [MichaelM-cislab]
 ```
 
 # Step 4: Exercising the application / generating performance data
 
-_Note: No lab notes required._
+Query 1: all orders containing the word PA
+
+
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
@@ -56,7 +58,7 @@ _Note: No lab notes required._
   > Enter Response Here.
 
 # Step 7: Submitting a Pull Request
-_Note: No lab notes required._
+
 
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
