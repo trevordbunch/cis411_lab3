@@ -54,7 +54,7 @@ _Note: No lab notes required._
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > The error that query 7 gave was that it could not find 'items' in 'accounts'.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > For Query 6 I suggest instead of using 'query' on line 3 you should use 'bagel' because after doing this it went from 16,900 milliseconds response time down to 123 milliseconds response time. Query 7 seems to have trouble finding item in accounts and that is causing the error.
+  > For Query 6 I suggest instead of using 'query' on line 3 you should use 'bagel' because after doing this it went from 16,900 milliseconds response time down to 123 milliseconds response time. Query 7 seems to have trouble finding item in accounts and that is causing the error. There is probably something that needs to be added to server.js that can allow items to be accessed.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._

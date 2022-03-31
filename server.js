@@ -116,7 +116,6 @@ type Account {
     email: String
     cell: String
     name: String
-    items: [AccountHistory]
 }
 type AccountHistory {
     id: String
@@ -124,8 +123,6 @@ type AccountHistory {
     cell: String
     name: String
     orders: [Order]
-    quantity: Int
-    label: String
 }`
 
 // A map of functions which return data for the schema.
