@@ -1,15 +1,14 @@
 # Lab Report: Monitoring
 ___
-**Course:** CIS 411, Spring 2021  
+**Course:** CIS 411, Spring 2022  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
-**Collaborators:** 
+**Name:** Kylie Firestone  
+**GitHub Handle:** kfirestone25   
+**Repository:** https://github.com/kfirestone25/cis411_lab5_Monitoring 
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/kfirestone25/cis411_lab5_Monitoring
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -17,9 +16,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "0ddba02d-fd9e-4548-a347-01d0a2c9f1e1",
+      "name": "Kylie Lynne Firestone",
+      "email": "kf1322@messiah.edu"
     }
   }
 }
@@ -57,9 +56,3 @@ _Note: No lab notes required._
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
-
-# Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
