@@ -124,6 +124,8 @@ type AccountHistory {
     cell: String
     name: String
     orders: [Order]
+    quantity: Int
+    label: String
 }`
 
 // A map of functions which return data for the schema.
