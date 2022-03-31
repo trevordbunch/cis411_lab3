@@ -116,6 +116,7 @@ type Account {
     email: String
     cell: String
     name: String
+    items: String
 }
 type AccountHistory {
     id: String

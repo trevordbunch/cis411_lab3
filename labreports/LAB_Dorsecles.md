@@ -38,23 +38,23 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > Some of the queries would take much longer than others. One didn't even work.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  >The performance seemed uneven.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Queries 6 and 7 were among the least performant.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > Query 7 was the most problematic because it did not work.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > Query 6 took the longest. It took 16,900 milliseconds to finish running.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > Query 7 gave an error so it was the most problematic and least performant.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The error that query 7 gave was that it could not find 'items' in 'accounts'.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > For Query 6 I suggest instead of using 'query' on line 3 you should use 'bagel' because after doing this it went from 16,900 milliseconds response time down to 123 milliseconds response time. Query 7 seems to have trouble finding item in accounts and that is causing the error.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
