@@ -2,9 +2,9 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Grace Schlauder  
+**GitHub Handle:** https://github.com/grace-schl  
+**Repository:** [Your Forked Repository](https://github.com/grace-schl/cis411_lab5_Monitoring)   
 **Collaborators:** 
 ___
 
@@ -28,7 +28,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['<cislab>']
 ```
 
 # Step 4: Exercising the application / generating performance data
