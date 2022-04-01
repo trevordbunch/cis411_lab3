@@ -2,14 +2,14 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Timothy Lee  
+**GitHub Handle:** timothymlee  
+**Repository:** [Forked Repository](https://github.com/timothymlee/cis411_lab5_Monitoring)  
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- The [link](https://github.com/timothymlee/cis411_lab5_Monitoring) of my forked repository
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -37,21 +37,31 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+| Case | Response Time (ms) | Apdex Score | Errors Per Minute | Longest Section |
+|----------------|---|---|---|---|
+| Query #1 | 5600 | 1 | 0 | Remainder, loadOrderByld |
+| Query #2 | 94.3 | 0.5 | 0 | n/A (Didn't show up on transactions) |
+| Query #3 | 301 | 0 | 0 | n/A |
+| Query #4 | 52.1 | 0.5 | 0 | n/A |
+| Query #5 | 310 | 0 | 0 | n/A |
+| Query #6 | 38163 | 0 | 0 | remainder, queryOrdersBySearchTerm |
+| Query #7 | 8.42 | 0 | 1 | n/A |
+| Mutation #1 | 5 |  |  |  |
+  > The duration of the running varies greatly and the last one fails.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance is uneven. Responses take from 8.42 ms to 38,163 ms.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Queries were much less performant than mutations.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > The query for all ordering containing the word "everything" and the query for all orderings containting the word "PA" were the most problematic. In general, making a query for something containing something was the most problematic.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > queryOrdersBySearchTerm, a branch of Middleware, took the longest time.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The least performant request was Query #7, followed by Query #1.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > queryOrdersBySearchTerm made 890 fast method calls and took 37,800 ms of the 38,163 ms.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
   > Enter Response Here.
 
