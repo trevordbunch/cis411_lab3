@@ -65,7 +65,7 @@ For the purposes of gaining 25% extra credit on the assignment, perform any of t
 ```
 {
   #Query 6: retrieve all orders container the word everything
-  orders(query: "everything") {
+  orders(baguel: "everything") {
     id
     customer {
       id
