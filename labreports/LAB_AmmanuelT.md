@@ -80,6 +80,6 @@ For the purposes of gaining 25% extra credit on the assignment, perform any of t
 ```
 
 1. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**. <br>
-   The new Query runs in 700ms instead of 70k ms
-   ![New Relic application performance overview](assets/improvedQuery.png)
+   The new Query runs in 700ms instead of 70k ms <br>
+   ![New Relic application improved performance](../assets/improvedQuery.png)
 2. Check in those changes and **note your solution(s)** in your lab report.
