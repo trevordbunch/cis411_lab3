@@ -61,12 +61,12 @@ _Note: No lab notes required._
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
-   I changed the Query 6 to:
+   I changed the Query 6 to:<br>
 
    ``` graphql
 {
   #Query 6: retrieve all orders container the word everything
-  orders(baguel: "everything") {
+  orders(query: "everything") {
     id
     customer {
       id
@@ -78,7 +78,9 @@ For the purposes of gaining 25% extra credit on the assignment, perform any of t
     }
   }
 }
+
 ```
+
 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**. <br>
    The new Query runs in 700ms instead of 70k ms
