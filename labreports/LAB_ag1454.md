@@ -13,12 +13,13 @@ ___
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
+
 ![GraphQL Response](/assets/graphql.png)
 
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -27,23 +28,23 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > The overall performance of the application was decent. Only one query didn't perform, which was Query 7.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance was more uneven than even. Peaks occured with Queries 1 and 6.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > The queries were less performant due to the results taking more than a milisecond to appear. Queries 1 and 6 in particular took a good couple of seconds to produce output.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > Between Queries 1 and 6, Query 6 was very problematic. It took much longer for Query 6 to produce results in comparison to the other queries.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > The segment that took the most time was the one that recorded Query 6's performance.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The least performant request happened at 9:02 PM.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The most problematic segment was one that took 67,900ms of response time. This is likely Query 6, as it took the longest to return data.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > Narrowing down Query 6 should improve its performance. It's a valid search on its own (you're free to search for whatever), but the results that the queries return would be more helpful if the search is narrowed.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
