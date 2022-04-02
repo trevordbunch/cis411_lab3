@@ -2,8 +2,8 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Reid Burger
-**GitHub Handle:** [Reid Burger](https://github.com/reidburger)
+**Name:** Reid Burger   
+**GitHub Handle:** [Reid Burger](https://github.com/reidburger)   
 **Repository:** [My Forked Repository](https://github.com/ReidBurger/cis411_lab5_Monitoring)  
 **Collaborators:** 
 ___
