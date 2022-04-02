@@ -40,14 +40,14 @@ _Note: No lab notes required._
 
 | Case | Response Time (ms) | Apdex Score | Errors Per Minute | Longest Section |
 |----------------|---|---|---|---|
-| Query #1 | 5600 | 1 | 0 | Remainder, loadOrderByld | 
-| Query #2 | 94.3 | 0.5 | 0 |  | 
-| Query #3 | 301 | 0 | 0 |  | 
-| Query #4 | 52.1 | 0.5 | 0 |  | 
-| Query #5 | 310 | 0 | 0 |  |
-| Query #6 | 38163 | 0 | 0 | remainder, queryOrdersBySearchTerm | 
-| Query #7 | 8.42 | 0 | 1 |  | 
-| Mutation #1 | 5 |  |  |  | 
+| Query 1 | 5600 | 1 | 0 | Remainder, loadOrderByld | 
+| Query 2 | 94.3 | 0.5 | 0 |  | 
+| Query 3 | 301 | 0 | 0 |  | 
+| Query 4 | 52.1 | 0.5 | 0 |  | 
+| Query 5 | 310 | 0 | 0 |  |
+| Query 6 | 38163 | 0 | 0 | remainder, queryOrdersBySearchTerm | 
+| Query 7 | 8.42 | 0 | 1 |  | 
+| Mutation 1 | 5 |  |  |  | 
 
   > The duration of the running varies greatly and the last one fails.
 * Is performance even or uneven? 
@@ -61,7 +61,7 @@ _Note: No lab notes required._
 * Within the transactions you're examining, what segment(s) took the most time?
   > queryOrdersBySearchTerm, a branch of Middleware, took the longest time.
 * Using New Relic, identify and record the least performant request(s).
-  > The least performant request was Query #7, followed by Query #1.
+  > The least performant request was Query 7, followed by Query 1.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > queryOrdersBySearchTerm made 890 fast method calls and took 37,800 ms of the 38,163 ms.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
