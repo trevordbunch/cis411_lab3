@@ -34,6 +34,8 @@ app_name: ['cislab']
 _Note: No lab notes required._
 
 # Step 5: Explore your performance data
+![Overview of Performance Data](../assets/PerformanceOverview.png)
+
 * What are your observations regarding the performance of this application? 
   > The application seems to perform well and have quick response times for most of the queries I ran. There were a couple queries that took considerably longer than the others. These were queries 1 and 6 from the list or queries we ran. In addition, query 7 had errors, so i needed to fix those. After I fixed it, it ran with a fast response time. 
 * Is performance even or uneven? 
@@ -44,6 +46,9 @@ _Note: No lab notes required._
   > The most problematic requests were the last two queries. Query 6, where we were trying to retrieve all orders container the word "everything," had a response time of 17,600 ms. Query 7 had some errors preventing it from running properly. After fixing these errors, the request ran quickly. 
 
 # Step 6: Diagnosing an issue based on telemetry data
+![Transaction Data](../assets/TransactionData.png)
+![Transaction Trace](../assets/TransactionTrace.png)
+
 * Within the transactions you're examining, what segment(s) took the most time?
   > The "remainder" section took the most time. For the longest transaction, it took 92% of the total time, taking 35,400 ms of 38,600 ms total.
 * Using New Relic, identify and record the least performant request(s).
