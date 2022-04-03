@@ -37,29 +37,29 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > From what was observed, the response times for majority of them were steady except for the GraphQL 6 from step 4; it took a longer time to complete. Also each query required different amout of data. 
+  > From what was observed, the response times for majority of them were steady except for the GraphQL 6 from step 4; it took a longer time to complete. Also each query required different amount of data. 
 
 * Is performance even or uneven? 
   > For this application, the performance was uneven; varying with each query. The average throughput was 0.433 rpm. 
 
 * Between queries and mutations, what requests are less performant? 
-  > The request that were less performant were query 6 and 7. With query 6, it took the longest amount of time for results to be shown. However, with query 7 an error was shows as the outpout. 
+  > The requests that were less performant were query 6 and 7. With query 6, it took the longest amount of time for results to be shown. However, with query 7 an error was shown as the outpout. 
 
 * Among the less performant requests, which ones are the most problematic?
-  > The most problematic was the seventh query due to the error returned. As a reuslt of the results were not helpful. 
+  > The most problematic was the seventh query due to the error returned. As a result of this, the results were not helpful. 
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
   > The transaction that took the most time was query 6. 
 
 * Using New Relic, identify and record the least performant request(s).
-  > Qury 7 was the least performant request. The error was that it could not validate the request. 
+  > Query 7 was the least performant request. The error was that it could not validate the request. 
 
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > The segment of the process that seemed to be the most probelmatic based on the results was the queryOrdersBySearchTerm, which took 39,100 ms. 
+  > The segment of the process that seemed to be the most problematic based on the results was the queryOrdersBySearchTerm, which took 39,100 ms. 
 
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Narrowing down the result of the queries. (for example; combining both queries). Another recommendation is a cache control which would lower the data load. 
+  > Narrowing down the result of the queries, for example; combining both queries. Another recommendation is a cache control which would lower the data load. 
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
