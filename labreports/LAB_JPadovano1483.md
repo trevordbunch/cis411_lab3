@@ -55,3 +55,16 @@ _Note: No lab notes required._
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
+
+# Step 8: [EXTRA CREDIT] Address the performance issue(s)
+For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
+1. Adjust the diagnosed slow call(s) to improve performance. 
+2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
+2. Check in those changes and **note your solution(s)** in your lab report.
+
+- Query 6 Improvements:<br>
+![Query 6 Improved](../assets/ImprovedQuery6.png)
+![Query 7 Improved](../assets/ImprovedQuery7.png)
+![Improved Response Times](../assets/ImprovedResponseTimes.png)
+
+After changing these queries, the response time peaked at just under 15 ms. 
