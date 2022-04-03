@@ -56,8 +56,8 @@ _Note: No lab notes required._
   > Query 7 was the least performant request. The error was that it could not validate the request. 
 
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > The segment of the process that seemed to be the most problematic based on the results was the queryOrdersBySearchTerm, which took 39,100 ms. 
-
+  > The segment of the process that seemed to be the most problematic based on the results was the remainder, which took most time.
+  
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
   > Narrowing down the result of the queries, for example; combining both queries. Another recommendation is a cache control which would lower the data load. 
 
