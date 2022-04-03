@@ -11,19 +11,26 @@ ___
 # Step 1: Fork this repository
 - The URL of my forked repository
 
+"https://github.com/GlorKemH/cis411_lab5_Monitoring"
+
+
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
 ```
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "c436a371-07bb-4ab1-b670-bbf71dba3a1f",
+      "name": "Kemi Gloria Houngbeke",
+      "email": "gh1241@messiah.edu"
     }
   }
 }
+
+
+
 ```
+
 
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
