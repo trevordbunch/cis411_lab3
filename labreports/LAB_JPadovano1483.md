@@ -1,6 +1,6 @@
 # Lab Report: Monitoring
 ___
-**Course:** CIS 411, Spring 2022
+**Course:** CIS 411, Spring 2022<br>
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
 **Name:** Jamie Padovano <br>
 **GitHub Handle:** JPadovano1483 <br>
