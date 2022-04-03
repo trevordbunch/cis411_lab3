@@ -62,11 +62,14 @@ For the purposes of gaining 25% extra credit on the assignment, perform any of t
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
 2. Check in those changes and **note your solution(s)** in your lab report.
 
-- Query 6 Improvements:<br>
+- Query 6 Improvements:  
+
 ![Query 6 Improved](../assets/ImprovedQuery6.png)
-Changed "query" to "bagel"<br>
+Changed "query" to "bagel"  
+
 ![Query 7 Improved](../assets/ImprovedQuery7.png)
-Replaced items {label, quantity} with "name" and "email"<br>
+Replaced items {label, quantity} with "name" and "email"  
+
 ![Improved Response Times](../assets/ImprovedResponseTimes.png)
 
 After changing these queries, the response time peaked at just under 15 ms. 
