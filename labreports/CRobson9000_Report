@@ -4,31 +4,33 @@ ___
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
 **Name:** Colin Robson  
 **GitHub Handle:** @CRobson9000  
-**Repository:** Your Forked Repository  
+**Repository:** [My Repository](https://github.com/CRobson9000/cis411_lab5_Monitoring/tree/main)  
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- The URL of my forked repository: https://github.com/CRobson9000/cis411_lab5_Monitoring/tree/main
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
 ```
 {
+  {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "4ca80b53-b583-4d37-b4b9-0f53b5ce1681",
+      "name": "Colin James Robson",
+      "email": "cjrtwin0901@gmail.com"
     }
   }
+}
 }
 ```
 
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['<Lab 7 Monitoring>']
 ```
 
 # Step 4: Exercising the application / generating performance data
