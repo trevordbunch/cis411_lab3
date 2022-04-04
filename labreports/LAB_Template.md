@@ -2,14 +2,17 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Kemi Gloria Houngbeke
+**GitHub Handle:** GlorKemH
+**Repository:**  https://github.com/GlorKemH/cis411_lab5_Monitoring
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
 - The URL of my forked repository
+
+"https://github.com/GlorKemH/cis411_lab5_Monitoring"
+
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -17,18 +20,22 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "c436a371-07bb-4ab1-b670-bbf71dba3a1f",
+      "name": "Kemi Gloria Houngbeke",
+      "email": "gh1241@messiah.edu"
     }
   }
 }
+
+
+
 ```
+
 
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['<cislab>']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -37,23 +44,27 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > From my observation not all querries were working properly
+
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance was even for some queries
+
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > The less perfoming queries were #3 & #6
+
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > #2 & #7 were not working
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > 50% for segment is query #3
+
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > the least performing query was #3
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > Enter Response Here.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > I would switch up queries so that it could pull data better.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._

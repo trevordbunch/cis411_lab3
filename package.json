@@ -18,7 +18,7 @@
     "graphql"
   ],
   "author": "Joel Worrall <joel@joelworrall.com>",
-  "license": "MIT",
+  "license": "cislab",
   "bugs": {
     "url": "https://github.com/tangollama/cis411_lab0/issues"
   },
