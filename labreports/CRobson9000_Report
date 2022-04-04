@@ -39,29 +39,23 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > Overall, the query runtimes were scattered performace-wise.  The first and and sixth query ran very slow while the others ran very fast.  The transaction time for the first query was 8 seconds and the transaction time for the sixth query was 36 seconds.  The other queries ran so fast that they didn't even show up on the graph.  The last one had an error, so it didn't even run. 
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance was very uneven and this is shown in my explanation above.  
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > The first and sixth queries ran the slowest (times shown above).
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > The sixth one took more than four times the amount of time to run than the first one, which was the second slowest one.  
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > The remainder section of the transaction for the sixth query took the most time.  
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The sixth query was the one that took the longest to respond
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The remainder section was the most problematic as it took 95% of the entire time to run the request.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > I'm not sure what the remainder section of the query is, but it sounds like it's the part that comes after all of the orders have been loaded.  There were a total of 890 orders that contained the word "everything".  To solve this issues, maybe you could narrow that search down just a bit more with another key word so it would have to do less work on each order, therefore cutting time in the remainder section.  
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
-
-# Step 8: [EXTRA CREDIT] Address the performance issue(s)
-For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
-1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
