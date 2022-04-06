@@ -2,14 +2,14 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
-**Collaborators:** 
+**Name:** Ricardo Padilla
+**GitHub Handle:** Ricardoianpadilla  
+**Repository:** https://github.com/Ricardoianpadilla/cis411_lab5_Monitoring  
+**Collaborators:** NA
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+https://github.com/Ricardoianpadilla/cis411_lab5_Monitoring
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -30,7 +30,7 @@ _Note: No lab notes required._
   > When it came to the performance of the application it seemed to be fast overall with the expection of 6 and 7 performing slightly diffrent.
 
 * Is performance even or uneven? 
-  > Peeks seemed to be uneven due to varying peaks
+  > Peeks seemed to be uneven beacuse of the many peaks varying.
 * Between queries and mutations, what requests are less performant? 
   > Queries seemed to less than mutation such as 6.
 * Among the less performant requests, which ones are the most problematic?
@@ -40,9 +40,9 @@ _Note: No lab notes required._
 * Within the transactions you're examining, what segment(s) took the most time?
   > The segment "Remainder" within the 6th query took the most time. 
 * Using New Relic, identify and record the least performant request(s).
-  > 6 was the least performant. With a wait time of 21,980 ms
+  > 6 was the least performant. With a wait time of 21,980 ms.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > The segment that was most problem was the "queryOrderBySearchTerm"
+  > The segment that was most problem was the "queryOrderBySearchTerm".
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
   > As 6 was the most problematic i feel figuring out a way to shorten the search "everthing" to search less fields instead of all field would help the issue.
 
