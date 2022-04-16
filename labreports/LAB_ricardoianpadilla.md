@@ -23,7 +23,7 @@ app_name: ['cislab']
 
 # Step 4: Exercising the application / generating performance data
 
-_Note: No lab notes required._
+![image.](/assets/A1.png)
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
