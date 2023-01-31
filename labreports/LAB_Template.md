@@ -25,7 +25,7 @@ ___
 }
 ```
 
-# Step 3: Signup for and configure New Relic
+# Step 3: Sign up for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
 app_name: ['<YOUR APP NAME>']
