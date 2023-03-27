@@ -2,14 +2,14 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Noah Brenneis  
+**GitHub Handle:** NoahBrenneis  
+**Repository:** github.com/NoahBrenneis/cis411_lab5_Monitoring  
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- github.com/NoahBrenneis/cis411_lab5_Monitoring
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -17,9 +17,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "18305459-aeff-4599-b782-6c248be51cc4",
+      "name": "Noah Brenneis",
+      "email": "nb1317@messiah.edu"
     }
   }
 }
