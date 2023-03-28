@@ -33,7 +33,7 @@ app_name: ['<cis411_Lab>']
 
 # Step 4: Exercising the application / generating performance data
 
-_Note: No lab notes required._
+<!-- _Note: No lab notes required._ -->
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
@@ -56,7 +56,7 @@ _Note: No lab notes required._
   > Enter Response Here.
 
 # Step 7: Submitting a Pull Request
-_Note: No lab notes required._
+<!-- _Note: No lab notes required._ -->
 
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
