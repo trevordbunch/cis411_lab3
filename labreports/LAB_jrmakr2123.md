@@ -4,22 +4,22 @@ ___
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
 **Name:** Jonah Robinson    
 **GitHub Handle:** [jrmakr2123](https://github.com/jrmakr2123)  
-**Repository:** Your Forked Repository  
-**Collaborators:** 
+**Repository:** [cis411_lab5_Monitoring](https://github.com/jrmakr2123/cis411_lab5_Monitoring)  
+<!-- **Collaborators:**  -->
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- https://github.com/jrmakr2123/cis411_lab5_Monitoring
 
-# Step 2: Clone your forked repository from the command line
+# Step 2: Running GraphQL from the command line
 - My GraphQL response from adding myself as an account on the test project
 ```
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "ac2ab0d1-598a-4d66-be29-18e8ba693693",
+      "name": "Jonah Robinson",
+      "email": "jr1521@messiah.edu"
     }
   }
 }
