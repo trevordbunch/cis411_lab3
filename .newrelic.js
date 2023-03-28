@@ -9,7 +9,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['cis411Lab5_Monitoring'],
+  app_name: ['cis411_Lab5_Monitoring'],
   /**
    * Your New Relic license key.
    */
