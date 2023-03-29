@@ -4,7 +4,7 @@ ___
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
 **Name:** Grace Taylor  
 **GitHub Handle:** gracet712  
-**Repository:** https://github.com/gracet712/cis411_lab5_Monitoring 
+**Repository:** https://github.com/gracet712/cis411_lab5_Monitoring      
 **Collaborators:** N/A
 ___
 
@@ -41,7 +41,7 @@ _Note: No lab notes required._
 * Is performance even or uneven? 
   > Performance is uneven based on the difficulty of the query. Queries that must search through more data take longer.
 * Between queries and mutations, what requests are less performant? 
-  > Queries are less performant, but only those that require searching through a large amount of data. Presumably mutations that required changing large amounts of data would also be less performant.
+  > The queries run in this lab are less performant, but only those that require searching through a large amount of data. Presumably mutations that required changing large amounts of data would also be less performant.
 * Among the less performant requests, which ones are the most problematic?
   > The most problematic request is # 6 - retrieving all orders that contain the word "everything." This query needs to search through multiple fields for the word "everything," but based on the results, it appears that "everything" is always a label - so it would be more efficient to search for the value just in this field if that is what is intended.
 
@@ -79,7 +79,7 @@ This table describes how much CPU and memory on my computer are being used by th
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > The most problematic segment is the "queryOrdersBySearchTerm" segment, which took 1.25 minutes out of 1.27 on the least performant request. This is presumably because it must search through a lot of fields, rather than one specific field as in most of the other requests.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Since the results of query #6 indicate that "everything" was really just being looked for in the label field, I would query just the label field (associated with the "bagel" argument) instead of every field associated with the order for this term. I would adjust query #1 in the same way, and fix query #7, as shown below:
+  > Since the results of query #6 indicate that "everything" was really just being looked for in the label field, I would query just the label field (associated with the "bagel" argument) instead of every field associated with the order. I would adjust query #1 in the same way, and fix query #7, as shown below:
 
 ```
 {
