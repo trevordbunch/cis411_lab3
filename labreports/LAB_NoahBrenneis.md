@@ -28,7 +28,7 @@ ___
 # Step 3: Signup for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['CIS411 Lab5 - Monitoring']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -37,23 +37,25 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > The application has a relatively stable performance, although it can sometimes take some time for queries to finish.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance of this application is uneven. While most queries finish in a relatively short amount of time, some queries take over a whole minute to complete.
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Queries are far less performant than mutations. Whereas mutations take mere milliseconds to process, queries can take anywhere from a few seconds to a minute to complete.
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > The least performant request is when performing a query using the query keyword. While other keywords such as location and bagel have relatively short response times, searching using the query keyword takes over 40 seconds each time, and takes even longer the longer the search term is.
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > The segment that takes the most time is the queryOrdersBySearchTerm component, which takes around 5 seconds on shorter queries and over 40 seconds on longer queries, up to over a minute.
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > The least performant request was the query orders(query: "blueberry"). I tested this query after performing the example queries given, and it took 1 minute and 16 seconds to process. The last query from the examples (orders(query: "everything")), meanwhile, only took 58.2 seconds.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The segment that is most problematic is the queryOrdersBySearchTerm component. This segment takes up 99% of the response time for the longest request, and in and of itself lasted over a minute.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > This segment appears to take the search term given and go through every individual piece of data to find any matches. Because it has to go through every section of the entire data set for every data point, it is essentially parsing through the entire database. 
+  
+  > As such, it could be made more efficient by reducing how much of the data is parsed through. One method of doing this would be analyzing the search term for a pattern (such as an ID or an email address), then only using it to search under the matching data section. For example, if the search term matches the format of an email domain (*[a-z].[com, net]), the search algorithm could exclude all the irrelevant data and only search through user emails.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
