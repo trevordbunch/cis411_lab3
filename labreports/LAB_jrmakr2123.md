@@ -54,9 +54,10 @@ app_name: ['<cis411_Lab>']
       name
     }
   }
-The next problematic request is request 6. This queries all variables for the word "everything." The nature of the request is searching for the bagel in particular. In that case we can change query to bagel in the search parameters and the issue is fixed. 
+  ~~~
+  >The next problematic request is request 6. This queries all variables for the word "everything." The nature of the request is searching for the bagel in particular. In that case we can change query to bagel in the search parameters and the issue is fixed. 
 
-The final problematic request is the request 1. This is actually fixed by request 2. In request 1, we query for the word PA. Like before this searches all possible variables for PA. This takes less time than request 6 because PA or the location data is closer to the top of the query chain. To fix this, like in request 2, we search through the location variable for PA thus we do not search in areas PA would not be in (increasing response time). I will detail more of this bellow in the extra credit tab :).
+  >The final problematic request is the request 1. This is actually fixed by request 2. In request 1, we query for the word PA. Like before this searches all possible variables for PA. This takes less time than request 6 because PA or the location data is closer to the top of the query chain. To fix this, like in request 2, we search through the location variable for PA thus we do not search in areas PA would not be in (increasing response time). I will detail more of this bellow in the extra credit tab :).
 
 
 # Step 6: Diagnosing an issue based on telemetry data
