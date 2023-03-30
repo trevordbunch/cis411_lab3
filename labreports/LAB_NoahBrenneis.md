@@ -53,9 +53,7 @@ _Note: No lab notes required._
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > The segment that is most problematic is the queryOrdersBySearchTerm component. This segment takes up 99% of the response time for the longest request, and in and of itself lasted over a minute.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > This segment appears to take the search term given and go through every individual piece of data to find any matches. Because it has to go through every section of the entire data set for every data point, it is essentially parsing through the entire database. 
-  
-  > As such, it could be made more efficient by reducing how much of the data is parsed through. One method of doing this would be analyzing the search term for a pattern (such as an ID or an email address), then only using it to search under the matching data section. For example, if the search term matches the format of an email domain (*[a-z].[com, net]), the search algorithm could exclude all the irrelevant data and only search through user emails.
+  > The simplest solution to improving the performance of these queries is to avoid using the query keyword entirely. By specifying a specific category, such as specifying "bagel: everything" instead of "query: everything", only a small portion of the data needs to be searched through instead of the whole thing, drastically improving performance.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
