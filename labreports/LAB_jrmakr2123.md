@@ -76,5 +76,61 @@ app_name: ['<cis411_Lab>']
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
+    >To address the slow calls, I opted to not use query. Rather I am using the name of the variable we are looking up. For example, for request 1, we are looking up PA, so I will search the location variable. In request 6 we are looking up everything (as in the bagel type) so we will only search in the variable bagel. 
+
+    > As for request 7, I will fix the request call to match the elements and variables under the accounts class. 
 2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
+
+![New Relic Data Screenshot](./../assets/newrelic_improved_stats.png)
+
+3. Check in those changes and **note your solution(s)** in your lab report.
+
+   * Solutions for increasing response time in GraphQL through a tweaked request.
+  ``` graphql
+  {
+    #Query 6: retrieve all orders container the word everything
+    #In other words, search "everything" only in the bagel variable.
+
+    orders(bagel: "everything") {
+      id
+      customer {
+        id
+        email
+      }
+      items {
+        label
+        quantity
+      }
+    }
+  }
+  ```
+  ``` graphql
+  {
+    #Query 7: all accounts that contain gmail.com
+    #Change to reflect what is in the accounts class.
+
+    accounts(query: "gmail.com") {
+        id
+        name
+        email
+      }
+  }
+  ```
+  ``` graphql
+  {
+    #Query 1: all orders containing the word PA
+    #Follow request 2 example and use the location not query.
+
+    orders(location: "PA") {
+      id
+      customer {
+        id
+        email
+      }
+      items {
+        label
+        quantity
+      }
+    }
+  }
+  ```
