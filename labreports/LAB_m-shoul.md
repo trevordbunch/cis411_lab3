@@ -54,7 +54,7 @@ _Note: No lab notes required._
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > The segment in the request permeation is ```queryOrderBySearchTerm```.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > To improve the performance of the most problematic requests, we could provide query arguments to filter the results of the query. For example, in the first query, we could change ```(query: "PA")``` to ```(location: "PA")``` to filter results that only include orders that are associated with Pennsylvania. In the sixth query, we could write a query that utilizes specific categories to improve the performance.
+  > To improve the performance of the most problematic requests, we could provide query arguments to filter the results of the query. For example, in the first query, we could change ```(query: "PA")``` to ```(location: "PA")``` to filter results that only include orders that are associated with Pennsylvania. In the sixth query, we change ```(query: "everything")``` to ```(bagel: "everything")``` to search in the bagel field specifically. Finally, in query seven, we can get rid of the items field and only search for the name, id, and email.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
@@ -62,5 +62,65 @@ _Note: No lab notes required._
 # Step 8: [EXTRA CREDIT] Address the performance issue(s)
 For the purposes of gaining 25% extra credit on the assignment, perform any of the following:
 1. Adjust the diagnosed slow call(s) to improve performance. 
-2. Verify the improved performance in New Relic, **including data and/or screenshots in your lab report**.
-2. Check in those changes and **note your solution(s)** in your lab report.
+  > The diagnosed slow calls I chose to improve were queries 1, 6 and 7. 
+  
+  ### Query 1:
+  > To imrpove the speed of query 1, I changed the word ```query:``` to ```location:``` to search for the keyword "PA" in the "location" field specifically.
+```
+{
+  orders(location: "PA") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+  }
+}
+```
+
+ ### Query 6:
+  > To improve the speed of query 6, I changed the word ```query:``` to ```bagel:``` to search for the keyword "everything" in the "bagel" field specifically.
+```
+{
+  orders(bagel: "everything") {
+    id
+    customer {
+      id
+      email
+    }
+    items {
+      label
+      quantity
+    }
+  }
+}
+```
+ ### Query 7:
+ > To fix query 7, I got rid of the ```items``` field, and only queried the id, name, and email. This fixed the query and resulted in faster performance.
+
+```
+{
+  accounts(query: "gmail.com") {
+    id
+    name
+    email
+  }
+}
+```
+
+1. Verify the improved performance in New Relic, 
+
+> Here are images comparing the query performance between the slower queries and the optimized queries.
+
+![Response Time](../assets/Improvements.png)
+> Response time of slow queries (left) and improved queries (right).
+
+![Slow Chart](../assets/SumSlow.png)
+> Summary of time consumed by the slow queries.
+
+![Fast Chart](../assets/SumImprove.png)
+> Summary of time consumed by the optimized queries.
