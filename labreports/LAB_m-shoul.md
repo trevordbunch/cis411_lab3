@@ -111,7 +111,7 @@ For the purposes of gaining 25% extra credit on the assignment, perform any of t
 }
 ```
 
-1. Verify the improved performance in New Relic, 
+2. Verify the improved performance in New Relic, 
 
 > Here are images comparing the query performance between the slower queries and the optimized queries.
 
