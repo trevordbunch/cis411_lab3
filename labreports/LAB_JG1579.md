@@ -55,7 +55,7 @@ _Note: No lab notes required._
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
   > The segment "queryOrdersBySearchTerm" was the least efficient by an incredibly large margin.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > The best way to improve performance is to limit the query's pool which will also limit the query's output. It also may be best to have the query use certain categories to also help improve speed.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
