@@ -47,13 +47,13 @@ _Note: No lab notes required._
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > The segement QueryOrderBySearchTerm had the longest response time.
+  > I dont know was only able to glean information based off search query respnse time.
 * Using New Relic, identify and record the least performant request(s).
-  > The request that searched the whole data took the longest.
+  > Unknown.
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > QueryOrderBySearchTerm is the most problematic.
+  >Unknown.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Change the method of querying to better reflect the data searched instead of the whole set.
+  > Unknown.
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
