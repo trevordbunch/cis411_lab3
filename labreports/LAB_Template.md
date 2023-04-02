@@ -2,10 +2,10 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
-**Collaborators:** 
+**Name:** Justin Ayres  
+**GitHub Handle:** JDAyres 
+**Repository:** https://github.com/JDAyres/cis411_lab5_Monitoring  
+**Collaborators:** Batman works alone... also ChatGPT...
 ___
 
 # Step 1: Fork this repository
