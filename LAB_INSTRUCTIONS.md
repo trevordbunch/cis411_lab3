@@ -18,7 +18,7 @@
 3. Navigate to that directory ```cd cis411_lab5_Monitoring```.
 4. Run ```npm install``` and watch the magic happen.
 5. Run ```npm start``` and navigate to http://localhost:4000/graphql.
-6. Run the following GraphQL mutation in GraphiQL and **record the response**.
+6. Run the following GraphQL mutation in GraphQL and **record the response**.
 ```
 mutation {
   mutateAccount(input: {
@@ -35,12 +35,12 @@ mutation {
 
 7. Stop your service with a ```Ctrl+C```, as we need to setup New Relic for telemetry acquisition.
 
-# Step 3: Signup for and configure New Relic
+# Step 3: Sign up for and configure New Relic
 In its downloaded state, the project will run successfully but fail to record any performance data to New Relic because you must follow the [installation instructions for the New Relic nodejs agent](https://docs.newrelic.com/docs/agents/nodejs-agent/installation-configuration/install-nodejs-agent). 
 
 To accomplish the necessary configuration, perform the following.
 
-1. [Signup for a New Relic account] (https://newrelic.com/signup)
+1. [Sign up for a New Relic account] (https://newrelic.com/signup)
 2. Once you've registered for an account, [login to New Relic](https://rpm.newrelic.com/).
 3. Navigate to your account settings at ```https://rpm.newrelic.com/accounts/```
 ![New Relic account settings](assets/newrelic_account_settings.png "New Relic account settings")

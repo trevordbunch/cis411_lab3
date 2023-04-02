@@ -2,14 +2,14 @@
 ___
 **Course:** CIS 411, Spring 2021  
 **Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
-**Name:** Your Name  
-**GitHub Handle:** Your GitHub Handle  
-**Repository:** Your Forked Repository  
+**Name:** Jeff Sinsel  
+**GitHub Handle:** JeffSinsel  
+**Repository:** [Your Forked Repository](https://github.com/JeffSinsel/cis411_lab5_Monitoring)  
 **Collaborators:** 
 ___
 
 # Step 1: Fork this repository
-- The URL of my forked repository
+- The [URL](https://github.com/JeffSinsel/cis411_lab5_Monitoring) of my forked repository
 
 # Step 2: Clone your forked repository from the command line
 - My GraphQL response from adding myself as an account on the test project
@@ -17,9 +17,9 @@ ___
 {
   "data": {
     "mutateAccount": {
-      "id": "a10db030-ded8-4397-a78f-30b79d3497ab",
-      "name": "MY NAME",
-      "email": "MY EMAIL"
+      "id": "96932fbd-2b40-44c1-be67-3ff090610cd0",
+      "name": "Jeff Sinsel",
+      "email": "js2062@messiah.edu"
     }
   }
 }
@@ -28,7 +28,7 @@ ___
 # Step 3: Sign up for and configure New Relic
 - The chosen name of your New Relic ```app_name``` configuration
 ```
-app_name: ['<YOUR APP NAME>']
+app_name: ['cislab']
 ```
 
 # Step 4: Exercising the application / generating performance data
@@ -37,23 +37,37 @@ _Note: No lab notes required._
 
 # Step 5: Explore your performance data
 * What are your observations regarding the performance of this application? 
-  > Enter Response Here.
+  > The application runs well but struggles when it comes to large queries with parameters that search every part of an order.
 * Is performance even or uneven? 
-  > Enter Response Here.
+  > The performance is very uneven, some queries were almost instant while other took over 30 seconds
 * Between queries and mutations, what requests are less performant? 
-  > Enter Response Here.
+  > Query 1 and 6 both took a a long time to complete
 * Among the less performant requests, which ones are the most problematic?
-  > Enter Response Here.
+  > Query 6 does not perform well and also does not 
 
 # Step 6: Diagnosing an issue based on telemetry data
 * Within the transactions you're examining, what segment(s) took the most time?
-  > Enter Response Here.
+  > The part of the query that took the longest is the part that actually went a searched through the database
 * Using New Relic, identify and record the least performant request(s).
-  > Enter Response Here.
+  > Query 1 and 6 were the least performant requests
 * Using the Transaction Trace capability in New Relic, identify which segment(s) in that request permeation is/are the most problematic and record your findings.
-  > Enter Response Here.
+  > The querying part of the query was the most problematic with Query 1's querying taking 2742 ms and Query 6's querying taking 33590 ms.
 * Recommend a solution for improving the performance of those most problematic request(s) / permeation(s).
-  > Enter Response Here.
+  > Both of the queries searched through every value in the orders causing them to have to search through a lot more data than the other queries. An easy way to fix this is adjust the queries to be more specific. For example rewriting query 1 to the query below so it only searches through the location parameter
+  ```{
+    orders(location: "PA") {
+      id
+      customer {
+        id
+        email
+      }
+      items {
+        label
+        quantity
+      }
+    }
+  }
+  ```
 
 # Step 7: Submitting a Pull Request
 _Note: No lab notes required._
